@@ -1,0 +1,23 @@
+---
+interface Props {
+  btn?: boolean;
+}
+
+const { btn = false } = Astro.props;
+---
+
+<TheSection name="intro">
+  <Fragment slot="header">
+    <div class="intro__bg">
+      <img src="/assets/img/hero/1.png" alt="" />
+    </div>
+  </Fragment>
+  <slot />
+  {
+    btn && (
+      <Button variant="contact">
+        <div class="text-xl">НАПИСАТЬ МНЕ</div>
+      </Button>
+    )
+  }
+</TheSection>

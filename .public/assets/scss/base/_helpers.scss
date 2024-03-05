@@ -1,0 +1,140 @@
+// ** container ** //
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1760px;
+}
+
+// ** Size ** //
+.w-full {
+  width: 100%;
+}
+.w-1\/2 {
+  width: 50%;
+}
+
+// ** Font  ** //
+.font-light {
+  font-weight: 300;
+}
+.font-regular {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-extrabold {
+  font-weight: 800;
+}
+.font-futura {
+  font-family: "Futura", sans-serif;
+}
+
+// ** Text transform & decoration ** //
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.underline {
+  text-decoration: underline;
+}
+.line-through {
+  text-decoration: line-through;
+}
+
+// ** Text align ** //
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+// ** Text color ** //
+.text-primary {
+  color: var(--primary);
+}
+.text-gray {
+  color: var(--gray);
+}
+.text-white {
+  color: #fff;
+}
+.text-black {
+  color: #000;
+}
+
+// ** Font sizes ** //
+.text-xs {
+  font-size: 0.75rem;
+}
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 120%;
+}
+.text-base {
+  font-size: 1rem;
+}
+.text-lg {
+  font-size: 1.125rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+}
+.text-h2 {
+  font-size: 56px;
+  line-height: 130%;
+}
+
+// ** Responsive ** //
+@include media("1820px") {
+  .container {
+    padding: 0 20px;
+    max-width: 1630px;
+  }
+}
+@include media("3xl") {
+  .container {
+    max-width: 1440px;
+  }
+}
+@include media("2xl") {
+  .container {
+    max-width: 1280px;
+  }
+}
+@include media("xl") {
+  .container {
+    max-width: 1024px;
+  }
+}
+@include media("lg") {
+  .container {
+    max-width: 768px;
+  }
+}
+@include media("md") {
+  .container {
+    max-width: 640px;
+  }
+}
+@include media("sm") {
+  .container {
+    padding: 0 16px;
+    max-width: 475px;
+  }
+}

@@ -1,0 +1,21 @@
+.btn {
+  user-select: none;
+  font-size: 16px;
+  transition: var(--transition);
+  cursor: pointer;
+  @include center;
+
+  &--contact {
+    gap: 10px;
+
+    svg {
+      transition: var(--transition);
+    }
+
+    &:hover {
+      svg {
+        transform: translateX(5px);
+      }
+    }
+  }
+}

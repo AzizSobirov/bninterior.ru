@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "Tilda Sans";
+  src: url(../fonts/TildaSans-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tilda Sans";
+  src: url(../fonts/TildaSans-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tilda Sans";
+  src: url(../fonts/TildaSans-Semibold.ttf) format("truetype");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tilda Sans";
+  src: url(../fonts/TildaSans-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Futura";
+  src: url(../fonts/FuturaPTLight.otf) format("opentype");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Futura";
+  src: url(../fonts/FuturaPTRegular.otf) format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Futura";
+  src: url(../fonts/FuturaPTBold.otf) format("opentype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --font: "Tilda Sans", sans-serif;
+  --font-futura: "Futura", sans-serif;
+  --text-color: #353535;
+  --primary: #ff9900;
+  --gray: #707070;
+  --hover-color: #e88c02;
+  --transition: all 0.25s ease;
+}
+
+@import "base/index";
+@import "components/index";
+@import "pages/index";

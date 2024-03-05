@@ -1,0 +1,24 @@
+---
+import { navLinks } from "../index.store";
+const isActive: boolean = false;
+---
+
+<header class="header" class:list={isActive ? "header-active" : ""}>
+  <div class="container">
+    <a href="/" class="header__logo">
+      <img src="/assets/img/logo.png" alt="" />
+    </a>
+    <div class="text-sm">Студия дизайна интерьера <br />г. Санкт-Петербург</div>
+    <ul class="header__list">
+      {
+        navLinks.map((link) => (
+          <li class="header__list-item">
+            <a class="text-xl" href={link.link}>
+              {link.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</header>
