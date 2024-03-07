@@ -99,6 +99,12 @@
   font-size: 56px;
   line-height: 130%;
 }
+.text-h3 {
+  font-size: 36px;
+}
+.text-h4 {
+  font-size: 24px;
+}
 
 // ** Responsive ** //
 @include media("1820px") {

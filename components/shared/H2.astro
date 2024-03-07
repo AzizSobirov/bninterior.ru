@@ -1,7 +1,10 @@
 ---
-const { ...rest } = Astro.props;
+interface Props {
+  ui?: string;
+}
+const { ui, ...rest } = Astro.props;
 ---
 
-<div class="text-h2" {...rest}>
+<div class="text-h2" class:list={ui} {...rest}>
   <slot />
 </div>

@@ -13,11 +13,5 @@ const { btn = false } = Astro.props;
     </div>
   </Fragment>
   <slot />
-  {
-    btn && (
-      <Button variant="contact">
-        <div class="text-xl">НАПИСАТЬ МНЕ</div>
-      </Button>
-    )
-  }
+  {btn && <Button variant="secondary">НАПИСАТЬ МНЕ</Button>}
 </TheSection>

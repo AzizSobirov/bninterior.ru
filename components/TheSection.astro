@@ -4,15 +4,22 @@ interface Props {
   id?: string;
   class?: string;
   container?: string;
+  only?: boolean;
 }
 
-const { name, container, ...rest } = Astro.props;
+const { name, container, only = false, ...rest } = Astro.props;
 ---
 
 <section class={name} {...rest}>
   <slot name="header" />
-  <div class="container" class:list={container}>
-    <slot />
-  </div>
+  {
+    !only ? (
+      <div class="container" class:list={container}>
+        <slot />
+      </div>
+    ) : (
+      <slot />
+    )
+  }
   <slot name="footer" />
 </section>

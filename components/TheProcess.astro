@@ -1,0 +1,38 @@
+---
+import { processes } from "../index.store";
+---
+
+<TheSection name="process">
+  <div class="process__header">
+    <H3>ПРОЦЕСС РАБОТЫ</H3>
+    <H4 ui="text-gray uppercase">этапы сотрудничества</H4>
+  </div>
+  <div class="process__content">
+    <ul class="process__steps">
+      {
+        processes.map((process, index) => (
+          <li class="text-h4" class:list={index === 0 ? "active" : ""}>
+            {process.title}
+          </li>
+        ))
+      }
+    </ul>
+    {
+      processes.map((process, index) => (
+        <div class="process__step" class:list={index === 0 ? "active" : ""}>
+          <div class="process__step-text" set:html={process.content} />
+          <Img src={process.img} only />
+        </div>
+      ))
+    }
+  </div>
+  <div class="process__list" data-accordion="process" data-multiple="true">
+    {
+      processes.map((process) => (
+        <Accordion title={process.title} icon="light">
+          <Fragment set:html={process.content} />
+        </Accordion>
+      ))
+    }
+  </div>
+</TheSection>

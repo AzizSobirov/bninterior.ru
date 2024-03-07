@@ -1,5 +1,79 @@
+---
+import { recents } from "../index.store";
+---
+
 <App title="Главная">
-  <TheIntro btn={true}>
+  <!-- TheIntro -->
+  <TheIntro btn>
     <H2>Интерьеры для ценящих <br />время и комфорт</H2>
   </TheIntro>
+  <!-- TheInteriors -->
+  <TheSection name="interiors" only>
+    <Card>
+      <H3>Частные интерьеры</H3>
+      <Fragment slot="other">
+        <Img name="ucard__bg" src="hero/interiors-1.png" />
+      </Fragment>
+    </Card>
+    <Card>
+      <H3>Общественные интерьеры</H3>
+      <Fragment slot="other">
+        <Img name="ucard__bg" src="hero/interiors-2.png" />
+      </Fragment>
+    </Card>
+  </TheSection>
+  <!-- TheAbout -->
+  <TheAbout />
+  <!-- TheServices -->
+  <TheServices />
+  <!-- TheProcess -->
+  <TheProcess />
+  <!-- TheAdvanatages -->
+  <TheSection name="advantages">
+    <Col>
+      <H4 ui="text-gray uppercase">РАБОТА СО МНОЙ</H4>
+      <P>
+        От вас необходимы только желание совместной работы и доверие, тогда
+        результат не заставит себя ждать!
+      </P>
+    </Col>
+    <Col>
+      <H3>Что Вы получаете, работая со мной:</H3>
+      <ul class="text-h4">
+        <li>
+          Время для семьи, пока специалисты воплощают пространство вашей мечты;
+        </li>
+        <li>Уникальный и эргономичный интерьер;</li>
+        <li>Экономия вашего времени, сил и денег.</li>
+      </ul>
+      <Button type="link" to="/" variant="secondary">НАПИСАТЬ МНЕ</Button>
+    </Col>
+  </TheSection>
+  <!-- TheRecent -->
+  <TheSection name="recent">
+    <H4 ui="text-gray uppercase">мои недавние проекты</H4>
+    <Row>
+      <P>
+        Я проектирую жилые и общественные помещений. В работе над проектом,
+        помимо красоты и трендов в дизайне, ориентируюсь на функциональность
+        и практичность интерьера.
+      </P>
+      <Button type="link" to="/projects" variant="secondary">
+        посмотреть все портфолио
+      </Button>
+    </Row>
+    <div class="recent__projects">
+      {
+        recents.map((item) => (
+          <div class="recent__projects-item">
+            <Img src={item.img} only />
+            <H4>{item.title}</H4>
+            <Button type="link" to={item.link} variant="secondary">
+              посмотреть проект
+            </Button>
+          </div>
+        ))
+      }
+    </div>
+  </TheSection>
 </App>

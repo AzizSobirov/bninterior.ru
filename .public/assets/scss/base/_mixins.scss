@@ -100,12 +100,11 @@ $breakpoints: (
 
 @mixin show($selector) {
   header,
-  section,
   footer {
     display: none !important;
   }
 
-  #{$selector} {
-    display: block !important;
+  section:not(#{$selector}) {
+    display: none !important;
   }
 }

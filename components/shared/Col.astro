@@ -5,6 +5,6 @@ interface Props {
 const { ui, ...rest } = Astro.props;
 ---
 
-<div class="text-h3" class:list={ui} {...rest}>
+<div class="col" class:list={ui} {...rest}>
   <slot />
 </div>

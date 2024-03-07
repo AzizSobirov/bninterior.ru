@@ -17,8 +17,6 @@ const timestamp = Date.now();
     <meta name="viewport" content="width=device-width" />
     <meta name="theme-color" content="#407fff" />
     <link rel="icon" type="image/png" href="/favicon.ico" />
-    <!-- <link rel="stylesheet" href="/assets/css/aos.min.css" /> -->
-    <!-- <link rel="stylesheet" href="/assets/css/swiper.min.css" /> -->
     <title>{title}</title>
   </head>
   <body>
@@ -27,10 +25,8 @@ const timestamp = Date.now();
     <main>
       <slot />
     </main>
-    <!-- <TheFooter /> -->
+    <TheFooter />
 
-    <!-- <script src="/assets/js/aos.min.js" is:inline></script> -->
-    <!-- <script src="/assets/js/swiper.min.js" is:inline></script> -->
     <script src=`/assets/js/app.js?v=${timestamp}` is:inline></script>
   </body>
 </html>
