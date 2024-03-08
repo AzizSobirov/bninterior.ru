@@ -35,6 +35,9 @@
     right: 0;
   }
 
+  @include media("3xl") {
+    max-height: calc(100vh - 60px);
+  }
   @include media(lg) {
     height: 500px;
     max-height: 100%;
