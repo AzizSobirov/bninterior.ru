@@ -122,15 +122,33 @@
   .container {
     max-width: 1280px;
   }
+  .text-h3 {
+    font-size: 32px;
+  }
 }
 @include media("xl") {
   .container {
     max-width: 1024px;
   }
+  .text-h2 {
+    font-size: 48px;
+  }
+  .text-h3 {
+    font-size: 28px;
+  }
+  .text-h4 {
+    font-size: 20px;
+  }
 }
 @include media("lg") {
   .container {
     max-width: 768px;
+  }
+  .text-h2 {
+    font-size: 36px;
+  }
+  .text-h3 {
+    font-size: 24px;
   }
 }
 @include media("md") {
@@ -142,5 +160,37 @@
   .container {
     padding: 0 16px;
     max-width: 475px;
+  }
+  .text-h2 {
+    font-size: 32px;
+  }
+  .text-h3 {
+    font-size: 20px;
+  }
+  .text-h4 {
+    font-size: 18px;
+  }
+}
+@include media("xs") {
+  .text-h2 {
+    font-size: 28px;
+    line-height: 110%;
+  }
+}
+@include media(641px, min-width) {
+  .sm\:text-xl {
+    font-size: 1.25rem;
+  }
+}
+
+@include media(1281px, min-width) {
+  .xl\:block {
+    display: block;
+  }
+  .xl\:text-xl {
+    font-size: 1.25rem;
+  }
+  .xl\:text-2xl {
+    font-size: 1.5rem;
   }
 }

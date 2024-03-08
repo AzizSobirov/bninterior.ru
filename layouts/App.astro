@@ -15,18 +15,19 @@ const timestamp = Date.now();
     <meta charset="UTF-8" />
     <meta name="description" content="My Astro template" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="theme-color" content="#407fff" />
+    <meta name="theme-color" content="#232b12" />
     <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/fancybox.min.css" />
     <title>{title}</title>
   </head>
   <body>
-    <ThePopup />
     <TheHeader />
     <main>
       <slot />
     </main>
     <TheFooter />
 
+    <script src="/assets/js/fancybox.min.js" is:inline></script>
     <script src=`/assets/js/app.js?v=${timestamp}` is:inline></script>
   </body>
 </html>

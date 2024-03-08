@@ -5,6 +5,14 @@
   cursor: pointer;
   @include center;
 
+  &--primary {
+    padding: 0 15px;
+    height: 40px;
+    min-width: 300px;
+    color: #000;
+    background: #fff;
+  }
+
   &--secondary {
     gap: 10px;
 

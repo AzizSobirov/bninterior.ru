@@ -1,5 +1,5 @@
 ---
-import { recents } from "../index.store";
+import { services, processes, recents } from "../index.store";
 ---
 
 <App title="Главная">
@@ -25,9 +25,65 @@ import { recents } from "../index.store";
   <!-- TheAbout -->
   <TheAbout />
   <!-- TheServices -->
-  <TheServices />
+  <TheSection name="services">
+    <H4 ui="text-gray uppercase">МОИ УСЛУГИ</H4>
+    <Col>
+      <H3>
+        Для дизайна нет границ. <br /> Работаю с проектами из любой точки мира!
+      </H3>
+      <div
+        class="services__list"
+        data-accordion="services"
+        data-multiple="true"
+      >
+        {
+          services.map((service) => (
+            <Accordion title={service.title}>
+              <H5>{service.desc}</H5>
+              <a class="text-lg font-semibold underline" href={service.link}>
+                Читать подробнее
+              </a>
+            </Accordion>
+          ))
+        }
+      </div>
+    </Col>
+  </TheSection>
   <!-- TheProcess -->
-  <TheProcess />
+  <TheSection name="process">
+    <div class="process__header">
+      <H3>ПРОЦЕСС РАБОТЫ</H3>
+      <H4 ui="text-gray uppercase">этапы сотрудничества</H4>
+    </div>
+    <div class="process__content">
+      <ul class="process__steps">
+        {
+          processes.map((process, index) => (
+            <li class="text-h4" class:list={index === 0 ? "active" : ""}>
+              {process.title}
+            </li>
+          ))
+        }
+      </ul>
+      {
+        processes.map((process, index) => (
+          <div class="process__step" class:list={index === 0 ? "active" : ""}>
+            <div class="process__step-text" set:html={process.content} />
+            <Img src={process.img} only />
+          </div>
+        ))
+      }
+    </div>
+    <div class="process__list" data-accordion="process" data-multiple="true">
+      {
+        processes.map((process) => (
+          <Accordion title={process.title} icon="light">
+            <div class="sm:text-xl" set:html={process.content} />
+          </Accordion>
+        ))
+      }
+    </div>
+  </TheSection>
   <!-- TheAdvanatages -->
   <TheSection name="advantages">
     <Col>

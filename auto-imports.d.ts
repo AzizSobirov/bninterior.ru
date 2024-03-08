@@ -17,8 +17,5 @@ declare global {
   const TheForm: typeof import('components/TheForm.astro')['default']
   const TheHeader: typeof import('components/TheHeader.astro')['default']
   const TheIntro: typeof import('components/TheIntro.astro')['default']
-  const ThePopup: typeof import('components/ThePopup.astro')['default']
-  const TheProcess: typeof import('components/TheProcess.astro')['default']
   const TheSection: typeof import('components/TheSection.astro')['default']
-  const TheServices: typeof import('components/TheServices.astro')['default']
 }

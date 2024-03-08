@@ -98,13 +98,24 @@ $breakpoints: (
   }
 }
 
-@mixin show($selector) {
-  header,
-  footer {
+@mixin show($selector, $selector2) {
+  section:not(#{$selector}) {
     display: none !important;
   }
 
-  section:not(#{$selector}) {
-    display: none !important;
+  @if $selector != header {
+    @if $selector2 != true {
+      header {
+        display: none !important;
+      }
+    }
+  }
+
+  @if $selector != footer {
+    @if $selector2 != true {
+      footer {
+        display: none !important;
+      }
+    }
   }
 }

@@ -11,6 +11,7 @@
     cursor: pointer;
 
     &-icon {
+      min-width: 40px;
       width: 40px;
       height: 40px;
       transition: var(--transition);
@@ -52,6 +53,19 @@
   &.active {
     .uaccordion__header-icon {
       transform: rotate(-45deg);
+    }
+  }
+
+  @include media("lg") {
+    &__header {
+      height: 60px;
+    }
+  }
+  @include media("sm") {
+    &__header-icon {
+      min-width: 35px;
+      width: 35px;
+      height: 35px;
     }
   }
 }

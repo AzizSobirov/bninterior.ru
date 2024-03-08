@@ -1,3 +1,11 @@
+// ** Header ** //
+const header = document.querySelector(".header");
+const headerMenu = document.querySelector(".header__menu");
+function toggleMenu() {
+  header.classList.toggle("header-active");
+  headerMenu.classList.toggle("active");
+}
+
 // ** Accordions ** //
 const getAccordionParents = document.querySelectorAll("[data-accordion");
 getAccordionParents.forEach((parent) => {
@@ -43,5 +51,13 @@ getProcessFilter.forEach((item, idx) => {
       el.classList.remove("active");
     });
     getProcessSteps[idx].classList.add("active");
+  });
+});
+
+//** fancybox **//
+let dataFancybox = ["about"];
+dataFancybox.forEach((name) => {
+  Fancybox.bind(`[data-fancybox="${name}"]`, {
+    Images: { Panzoom: { maxScale: 3 } },
   });
 });
