@@ -1,0 +1,117 @@
+// ** Portfolio ** //
+.portfolio {
+  margin-top: 60px;
+  padding: 20px 0 50px;
+
+  .container {
+    @include grid-cols(3, 20px);
+
+    & > .col {
+      width: 100%;
+      @include start(column, 20px, flex-start);
+    }
+
+    & > .col:nth-child(1) {
+      .portfolio__project:nth-child(1),
+      .portfolio__project:nth-child(4),
+      .portfolio__project:nth-child(7) {
+        max-height: 830px;
+      }
+
+      .portfolio__project:nth-child(2),
+      .portfolio__project:nth-child(5),
+      .portfolio__project:nth-child(8) {
+        max-height: 600px;
+      }
+      .portfolio__project:nth-child(3),
+      .portfolio__project:nth-child(6),
+      .portfolio__project:nth-child(9) {
+        max-height: 285px;
+      }
+    }
+
+    & > .col:nth-child(2) {
+      .portfolio__project:nth-child(1),
+      .portfolio__project:nth-child(4),
+      .portfolio__project:nth-child(7) {
+        max-height: 285px;
+      }
+
+      .portfolio__project:nth-child(2),
+      .portfolio__project:nth-child(5),
+      .portfolio__project:nth-child(8) {
+        max-height: 830px;
+      }
+      .portfolio__project:nth-child(3),
+      .portfolio__project:nth-child(6),
+      .portfolio__project:nth-child(9) {
+        max-height: 600px;
+      }
+    }
+
+    & > .col:nth-child(3) {
+      .portfolio__project:nth-child(1),
+      .portfolio__project:nth-child(4),
+      .portfolio__project:nth-child(7) {
+        max-height: 600px;
+      }
+
+      .portfolio__project:nth-child(2),
+      .portfolio__project:nth-child(5),
+      .portfolio__project:nth-child(8) {
+        max-height: 285px;
+      }
+      .portfolio__project:nth-child(3),
+      .portfolio__project:nth-child(6),
+      .portfolio__project:nth-child(9) {
+        max-height: 830px;
+      }
+    }
+  }
+
+  &__project {
+    position: relative;
+    min-height: 285px;
+    width: 100%;
+    cursor: pointer;
+
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-info {
+      position: absolute;
+      padding: 20px;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      background: rgba(35, 43, 18, 0.85);
+      transition: var(--transition);
+      @include center;
+      opacity: 0;
+    }
+
+    .text-xl {
+      position: absolute;
+      padding: 8px 20px;
+      top: 20px;
+      left: 20px;
+      border: 1px solid #fff;
+      min-width: 210px;
+    }
+
+    .col {
+      @include center(5px, column);
+    }
+
+    &:hover {
+      .portfolio__project-info {
+        opacity: 1;
+      }
+    }
+  }
+}

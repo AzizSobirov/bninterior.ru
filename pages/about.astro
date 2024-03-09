@@ -1,0 +1,55 @@
+---
+import { advantages } from "../index.store";
+---
+
+<App title="О компании">
+  <!-- TheIntro -->
+  <TheSection name="about__intro">
+    <Fragment slot="header">
+      <Img name="about__intro-bg" src="hero/about-banner.png" />
+    </Fragment>
+    <H2 ui="font-futura font-light">О НАС</H2>
+    <P>
+      BN interior - студия дизайна интерьера из Санкт-Петербурга. Мы
+      специализируемся на создании частных и общественных интерьеров. <br />
+      Предоставляем полный спектр услуг: от разработки дизайн-проекта до сопровождения
+      строительных работ и комплектации объекта.
+    </P>
+    <Button type="link" to="#">ЗАКАЗАТЬ ДИЗАЙН-ПРОЕКТ</Button>
+  </TheSection>
+  <!-- TheApproach -->
+  <TheSection name="approach">
+    <H2 ui="font-futura font-light">ПОДХОД К РАБОТЕ</H2>
+    <Row>
+      <P>
+        Главная цель нашей работы – вдохновлять людей на новый этап их жизни,
+        создавать пространство для комфортной и счастливой жизни или успешного
+        бизнеса.
+      </P>
+      <P>
+        Стремимся, создавать продуманные интерьеры для комфортной жизни или
+        бизнеса.
+        <br /><br />
+        Каждый наш проект - это индивидуальный подход.
+      </P>
+    </Row>
+  </TheSection>
+  <!-- TheAdvantages -->
+  <TheSection name="advantages">
+    <H2 ui="font-futura font-light">ПРЕИМУЩЕСТВА</H2>
+    <P>Работая с нами вы получите следующие преимущества:</P>
+    <ul class="advantages__list">
+      {
+        advantages.map((item) => (
+          <li class="advantages__item">
+            <Img name="advantages__item-bg" src={item.img} />
+            <H3>{item.title}</H3>
+            <P>{item.desc}</P>
+          </li>
+        ))
+      }
+    </ul>
+  </TheSection>
+  <!-- TheAbout -->
+  <TheAbout ui="py" />
+</App>

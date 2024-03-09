@@ -40,7 +40,7 @@ import { services, processes, recents } from "../index.store";
           services.map((service) => (
             <Accordion title={service.title}>
               <H5>{service.desc}</H5>
-              <a class="text-lg font-semibold underline" href={service.link}>
+              <a class="sm:text-lg font-semibold underline" href={service.link}>
                 Читать подробнее
               </a>
             </Accordion>
@@ -84,8 +84,8 @@ import { services, processes, recents } from "../index.store";
       }
     </div>
   </TheSection>
-  <!-- TheAdvanatages -->
-  <TheSection name="advantages">
+  <!-- TheWork -->
+  <TheSection name="work">
     <Col>
       <H4 ui="text-gray uppercase">РАБОТА СО МНОЙ</H4>
       <P>

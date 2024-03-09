@@ -9,7 +9,7 @@ function toggleMenu() {
 // ** Accordions ** //
 const getAccordionParents = document.querySelectorAll("[data-accordion");
 getAccordionParents.forEach((parent) => {
-  const isMultiple = !!parent.dataset.multiple;
+  const isMultiple = parent.dataset.multiple;
   const accordions = parent.querySelectorAll(".uaccordion");
   accordions.forEach((accordion) => {
     const header = accordion.querySelector(".uaccordion__header");
@@ -26,7 +26,7 @@ getAccordionParents.forEach((parent) => {
         body.style.maxHeight = 0;
       }
 
-      if (!isMultiple) {
+      if (!isMultiple || isMultiple == "false") {
         accordions.forEach((el) => {
           if (el !== accordion) {
             el.classList.remove("active");

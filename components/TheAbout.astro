@@ -1,4 +1,14 @@
-<TheSection name="about">
+---
+interface Props {
+  ui?: string;
+}
+
+const { ui } = Astro.props;
+
+const name = ui ? `about ${ui}` : "about";
+---
+
+<TheSection name={name}>
   <Col>
     <H3>Наталья Бочина</H3>
     <P>дизайнер интерьеров и основатель собственной студии BN INTERIOR</P>

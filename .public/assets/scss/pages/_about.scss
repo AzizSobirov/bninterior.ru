@@ -1,0 +1,196 @@
+// ** About ** //
+.about__intro {
+  position: relative;
+  margin-top: 60px;
+  height: 475px;
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .container {
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    @include center(40px, column);
+  }
+
+  .btn {
+    margin-top: 10px;
+    min-width: 260px;
+  }
+
+  @include media("3xl") {
+    br {
+      display: none;
+    }
+  }
+  @include media("md") {
+    height: 400px;
+
+    .container {
+      gap: 20px;
+    }
+  }
+}
+
+// ** Approach ** //
+.approach {
+  padding: 100px 0 80px;
+
+  .container {
+    @include start(column, 45px);
+  }
+
+  .row {
+    @include start(row, 120px, flex-start);
+
+    p {
+      width: 100%;
+      max-width: 680px;
+
+      &:nth-child(2) {
+        max-width: 980px;
+      }
+    }
+  }
+
+  @include media("3xl") {
+    padding: 60px 0;
+  }
+
+  @include media("lg") {
+    padding: 50px 0;
+
+    .row {
+      gap: 40px;
+    }
+  }
+  @include media("md") {
+    .container {
+      gap: 20px;
+    }
+
+    .row {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  @include media("sm") {
+    padding: 30px 0;
+  }
+}
+
+// ** Advantages ** //
+.advantages {
+  .container {
+    @include start(column, 20px);
+  }
+
+  &__list {
+    margin-top: 20px;
+    @include grid-cols(4, 20px);
+  }
+
+  &__item {
+    position: relative;
+    padding: 40px 20px;
+    color: #fff;
+    height: 580px;
+    @include start(column, 60px, flex-start);
+
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .text-h3 {
+      min-height: 75px;
+      line-height: 110%;
+    }
+  }
+
+  @include media("3xl") {
+    &__item {
+      height: 480px;
+
+      .text-h3 {
+        font-size: 32px;
+      }
+    }
+  }
+  @include media("2xl") {
+    &__list {
+      gap: 15px;
+    }
+
+    &__item {
+      padding: 30px 20px;
+      height: 420px;
+      gap: 30px;
+
+      .text-h3 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+  @include media("xl") {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      height: 380px;
+    }
+  }
+  @include media("md") {
+    &__list {
+      gap: 10px;
+    }
+    &__item {
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  @include media("sm") {
+    &__list {
+      margin-top: 0;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+      height: auto;
+      gap: 60px;
+
+      .text-h3 {
+        min-height: auto;
+      }
+    }
+  }
+}

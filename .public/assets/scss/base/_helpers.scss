@@ -178,6 +178,9 @@
   }
 }
 @include media(641px, min-width) {
+  .sm\:text-lg {
+    font-size: 1.125rem;
+  }
   .sm\:text-xl {
     font-size: 1.25rem;
   }
