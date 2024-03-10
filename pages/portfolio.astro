@@ -18,13 +18,13 @@ projects.filter((project, idx) => {
 <App title="Проекты">
   <!-- TheProjects -->
   <TheSection name="portfolio">
-    <Col>
+    <div class="portfolio__group">
       {
         col1.map((project) => (
           <a href={project.link} class="portfolio__project">
             <Img src={project.img} only />
             <div class="portfolio__project-info">
-              <div class="text-xl">{project.city}</div>
+              <div class="sm:text-xl">{project.city}</div>
               <Col>
                 <H2>{project.title}</H2>
                 <P>{project.size}</P>
@@ -33,14 +33,14 @@ projects.filter((project, idx) => {
           </a>
         ))
       }
-    </Col>
-    <Col>
+    </div>
+    <div class="portfolio__group">
       {
         col2.map((project) => (
           <a href={project.link} class="portfolio__project">
             <Img src={project.img} only />
             <div class="portfolio__project-info">
-              <div class="text-xl">{project.city}</div>
+              <div class="sm:text-xl">{project.city}</div>
               <Col>
                 <H2>{project.title}</H2>
                 <P>{project.size}</P>
@@ -49,14 +49,14 @@ projects.filter((project, idx) => {
           </a>
         ))
       }
-    </Col>
-    <Col>
+    </div>
+    <div class="portfolio__group">
       {
         col3.map((project) => (
           <a href={project.link} class="portfolio__project">
             <Img src={project.img} only />
             <div class="portfolio__project-info">
-              <div class="text-xl">{project.city}</div>
+              <div class="sm:text-xl">{project.city}</div>
               <Col>
                 <H2>{project.title}</H2>
                 <P>{project.size}</P>
@@ -65,6 +65,6 @@ projects.filter((project, idx) => {
           </a>
         ))
       }
-    </Col>
+    </div>
   </TheSection>
 </App>

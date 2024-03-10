@@ -55,7 +55,7 @@ getProcessFilter.forEach((item, idx) => {
 });
 
 //** fancybox **//
-let dataFancybox = ["about"];
+let dataFancybox = ["about", "portfolio"];
 dataFancybox.forEach((name) => {
   Fancybox.bind(`[data-fancybox="${name}"]`, {
     Images: { Panzoom: { maxScale: 3 } },

@@ -1,0 +1,61 @@
+---
+import { posts } from "../index.store";
+
+const col1: any[] = [];
+const col2: any[] = [];
+const col3: any[] = [];
+posts.filter((post, idx) => {
+  if (idx % 3 === 0) {
+    col1.push(post);
+  } else if (idx % 3 === 1) {
+    col2.push(post);
+  } else {
+    col3.push(post);
+  }
+});
+---
+
+<App title="Блог">
+  <!-- TheBlog -->
+  <TheSection name="blog">
+    <div class="blog__group">
+      {
+        col1.map((post) => (
+          <a href={post.link} class="blog__post">
+            <Img src={post.img} only />
+            <div class="blog__post-info">
+              <div class="sm:text-xl">{post.date}</div>
+              <H3>{post.title}</H3>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+    <div class="blog__group">
+      {
+        col2.map((post) => (
+          <a href={post.link} class="blog__post">
+            <Img src={post.img} only />
+            <div class="blog__post-info">
+              <div class="sm:text-xl">{post.date}</div>
+              <H3>{post.title}</H3>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+    <div class="blog__group">
+      {
+        col3.map((post) => (
+          <a href={post.link} class="blog__post">
+            <Img src={post.img} only />
+            <div class="blog__post-info">
+              <div class="sm:text-xl">{post.date}</div>
+              <H3>{post.title}</H3>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </TheSection>
+</App>

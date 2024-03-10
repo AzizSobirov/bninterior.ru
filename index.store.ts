@@ -5,7 +5,7 @@ const navLinks = [
   },
   {
     name: "Услуги",
-    link: "/",
+    link: "/services",
   },
   {
     name: "Проекты",
@@ -13,7 +13,7 @@ const navLinks = [
   },
   {
     name: "Блог",
-    link: "/",
+    link: "/blog",
   },
   {
     name: "О нас",
@@ -21,7 +21,7 @@ const navLinks = [
   },
   {
     name: "Контакты",
-    link: "/",
+    link: "/contacts",
   },
 ];
 
@@ -161,7 +161,7 @@ const projects = [
     link: "/portfolio-project",
   },
   {
-    img: "projects/1.png",
+    img: "projects/2.png",
     title: "Квартира",
     size: "120 м²",
     city: "САНКТ-ПЕТЕРБУРГ",
@@ -281,4 +281,115 @@ const projects = [
   },
 ];
 
-export { navLinks, services, processes, recents, advantages, projects };
+const posts = [
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+  {
+    img: "projects/1.png",
+    title: "Как выбирать дизайнера интерьера?",
+    date: "18 марта",
+    link: "/blog-page",
+  },
+];
+
+export { navLinks, services, processes, recents, advantages, projects, posts };
