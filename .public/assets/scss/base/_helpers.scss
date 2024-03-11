@@ -178,6 +178,12 @@
   }
 }
 @include media(641px, min-width) {
+  .sm\:hidden {
+    display: none;
+  }
+  .sm\:text-base {
+    font-size: 1rem;
+  }
   .sm\:text-lg {
     font-size: 1.125rem;
   }

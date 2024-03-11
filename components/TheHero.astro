@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<TheSection name="hero" only>
+  <div class="hero__wrapper">
+    <div class="container">
+      <Col>
+        <H2 ui="font-futura font-light uppercase" set:html={title} />
+      </Col>
+      <Col><slot /></Col>
+    </div>
+  </div>
+</TheSection>

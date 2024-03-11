@@ -1,0 +1,97 @@
+---
+import { service } from "../index.store";
+---
+
+<App title="Что входит в дизайн-проект">
+  <!-- TheHero -->
+  <TheHero title="ЧТО ВХОДИТ <br/> В ДИЗАЙн-ПРОЕКТ">
+    <Img src="services/1.png" only />
+  </TheHero>
+  <!-- ThePrices -->
+  <TheSection name="prices">
+    <div class="prices__list">
+      <Card>
+        <Fragment slot="header">
+          <H3 ui="font-futura font-light uppercase">
+            ДИЗАЙН-ПРОЕКТ <br /> ЖИЛОГО ПОМЕЩЕНИЯ
+          </H3>
+        </Fragment>
+        <H4 ui="text-gray">Стоимость:</H4>
+        <ul class="text-h4">
+          <li>Помещение до 40 м² — 4500 Руб./м²</li>
+          <li>Помещение от 40 м² до 80 м² — 4000 Руб./м²</li>
+          <li>Помещение от 80 м² до 150 м² — 3500 Руб./м²</li>
+          <li>Помещение более 150 м² — 3000 Руб./м²</li>
+        </ul>
+        <span class="text-sm sm:text-base">
+          *Стоимость может меняться от сложности и выбранного стиля.
+        </span>
+      </Card>
+      <Card>
+        <Fragment slot="header">
+          <H3 ui="font-futura font-light uppercase">
+            ДИЗАЙН-ПРОЕКТ ЖИЛОГО <br /> ПОМЕЩЕНИЯ с эскизными изображениями
+          </H3>
+          <span class="sm:text-xl">(без 3D визуализации)</span>
+        </Fragment>
+        <H4 ui="text-gray">Стоимость:</H4>
+        <ul class="text-h4">
+          <li>Помещение до 40 м² — 3600 Руб./м²</li>
+          <li>Помещение от 40 м² до 80 м² — 3200 Руб./м²</li>
+          <li>Помещение от 80 м² до 150 м² — 2800 Руб./м²</li>
+          <li>Помещение более 150 м² — 2400 Руб./м²</li>
+        </ul>
+      </Card>
+      <Card>
+        <Fragment slot="header">
+          <H3 ui="font-futura font-light uppercase">
+            ДИЗАЙН-ПРОЕКТ <br /> КОММЕРЧЕСКОГО ПОМЕЩЕНИЯ
+          </H3>
+        </Fragment>
+        <H4 ui="text-gray">Стоимость:</H4>
+        <ul class="text-h4">
+          <li>Менее 500 м² — от 2500 Руб./м²</li>
+          <li>Более 500 м² — стоимость рассчитывается индивидуально.</li>
+        </ul>
+      </Card>
+    </div>
+    <P>
+      Проектирование интерьеров — сложный процесс. А поиск подходящего именно
+      вам дизайнера — еще более сложный. Один из главных принципов нашей работы
+      — индивидуальный дизайн. Мы стремимся создать интерьер для конкретного
+      человека, который отражает его характер, образ жизни и желания. Для
+      достижения этой цели необходимо доверие и понимание между заказчиком и
+      дизайнером.
+      <br /><br />
+      Информация ниже поможет вам понять как мы работаем, какие этапы работ включает
+      в себя дизайн-проект, а также, что именно вы получите по его завершению.
+    </P>
+  </TheSection>
+  <!-- TheServiceIncluded -->
+  <TheSection name="included">
+    <H2 ui="font-futura font-light">Что входит в дизайн-проект</H2>
+    <ul class="included__list">
+      {
+        service.included.list.map((service) => (
+          <li>
+            <Img src={service.icon} />
+            <Col>
+              <H4>{service.title}</H4>
+              <p class="text-sm sm:text-base">{service.desc}</p>
+            </Col>
+          </li>
+        ))
+      }
+    </ul>
+  </TheSection>
+  <!-- TheService Advantages -->
+  <TheAdvantages
+    title="Готовый дизайн-проект:"
+    list={service.included.advantages}
+  />
+  <!-- TheService DisAdvantages -->
+  <TheDisAdvantages
+    title="В дизайн-проект не входит:"
+    list={service.included.disadvantages}
+  />
+</App>

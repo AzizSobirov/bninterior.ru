@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  list: string[];
+}
+
+const { title, list } = Astro.props;
+---
+
+<TheSection name="disadv">
+  <H2 ui="font-futura font-light">{title}</H2>
+  <ul class="disadv__list" class:list={list.length == 4 ? "flex" : ""}>
+    {
+      list.map((item) => (
+        <li class="disadv__list-item">
+          <Img src="icons/close.svg" only />
+          <P>{item}</P>
+        </li>
+      ))
+    }
+  </ul>
+</TheSection>

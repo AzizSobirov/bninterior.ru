@@ -13,9 +13,11 @@ declare global {
   const P: typeof import('components/shared/P.astro')['default']
   const Row: typeof import('components/shared/Row.astro')['default']
   const TheAbout: typeof import('components/TheAbout.astro')['default']
+  const TheAdvantages: typeof import('components/TheAdvantages.astro')['default']
+  const TheDisAdvantages: typeof import('components/TheDisAdvantages.astro')['default']
   const TheFooter: typeof import('components/TheFooter.astro')['default']
-  const TheForm: typeof import('components/TheForm.astro')['default']
   const TheHeader: typeof import('components/TheHeader.astro')['default']
+  const TheHero: typeof import('components/TheHero.astro')['default']
   const TheIntro: typeof import('components/TheIntro.astro')['default']
   const TheSection: typeof import('components/TheSection.astro')['default']
 }
