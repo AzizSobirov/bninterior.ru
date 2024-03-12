@@ -1,3 +1,136 @@
-<App title="Услуги">
+---
+import { service } from "../index.store";
+---
 
+<App title="Услуги">
+  <!-- TheService -->
+  <TheSection name="service" only>
+    <div class="container">
+      <H2 ui="font-futura uppercase">перечень услуг</H2>
+    </div>
+    <Fragment name="footer">
+      <div class="service__item">
+        <div class="service__header">
+          <Img src="services/1.png" only />
+          <Col>
+            <H2 ui="font-futura uppercase">ДИЗАЙН-ПРОЕКТ</H2>
+            <P>
+              Комплект документов, описывающих функциональные и дизайнерские
+              решения. Чертежи помещения, фотореалистичные визуализации и
+              спецификации.
+            </P>
+            <H3>от 5 000 руб/м2</H3>
+            <Button type="link" to="/service-design">
+              ЧТО ВХОДИТ В ДИЗАЙН-ПРОЕКТ
+            </Button>
+          </Col>
+        </div>
+        <div class="service__body container">
+          <H2 ui="font-futura">Что входит в дизайн-проект</H2>
+          <ul class="service__details service--design">
+            {
+              service.included.list.map((service, idx) => (
+                <li>
+                  <Img src={service.icon} />
+                  <H4>{service.title}</H4>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+      <div class="service__item">
+        <div class="service__header">
+          <Img src="services/2.png" only />
+          <Col>
+            <H2 ui="font-futura uppercase">АВТОРСКИЙ НАДЗОР</H2>
+            <P>
+              Контроль соответствия строительных работ проектной документации.
+              Оперативное и квалифицированное внесение изменений в проект при
+              обоснованных отступлениях от проектной документации.
+            </P>
+            <H3>от 40 000 руб. в месяц</H3>
+            <Button type="link" to="/service-nadzor">
+              ЧТО ВХОДИТ В ДИЗАЙН-ПРОЕКТ
+            </Button>
+          </Col>
+        </div>
+        <div class="service__body container">
+          <H2 ui="font-futura">Что входит в авторский надзор</H2>
+          <ul class="service__details service--nadzor">
+            {
+              service.nadzor.list.map((service) => (
+                <li>
+                  <Img src={service.icon} />
+                  <H4>{service.title}</H4>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+      <div class="service__item">
+        <div class="service__header">
+          <Img src="services/3.png" only />
+          <Col>
+            <H2 ui="font-futura uppercase">СОСТАВЛЕНИЕ СМЕТЫ</H2>
+            <P>
+              Расчет расходов на реализацию дизайн-проекта. Включает в себя
+              отделочные материалы, сантехнику, мебель, освещение, технику,
+              декор и другие элементы дизайна
+            </P>
+            <H3>от 50 000 руб.</H3>
+            <Button type="link" to="/service-smeta">
+              ЧТО ВХОДИТ В ДИЗАЙН-ПРОЕКТ
+            </Button>
+          </Col>
+        </div>
+        <div class="service__body container">
+          <H2 ui="font-futura">
+            Смета содержит расчет для следующих позиций
+          </H2>
+          <ul class="service__details service--smeta">
+            {
+              service.smeta.list.map((service) => (
+                <li>
+                  <Img src={service.icon} />
+                  <H4>{service.title}</H4>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+      <div class="service__item">
+        <div class="service__header">
+          <Img src="services/4.png" only />
+          <Col>
+            <H2 ui="font-futura uppercase">КОМПЛЕКТАЦИЯ</H2>
+            <P>
+              Комплекс работ, направленный на своевременную закупку всех позиций
+              по смете для обеспечения максимально быстрого перехода от одного
+              этапа строительных работ к другому.
+            </P>
+            <H3>10% от стоимости сметы</H3>
+            <Button type="link" to="/service-komplektatsiya">
+              ЧТО ВХОДИТ В ДИЗАЙН-ПРОЕКТ
+            </Button>
+          </Col>
+        </div>
+        <div class="service__body container">
+          <H2 ui="font-futura">Что входит в комплектацию</H2>
+          <ul class="service__details service--komplekt">
+            {
+              service.komplekt.list.map((service) => (
+                <li>
+                  <Img src={service.icon} />
+                  <H4>{service.title}</H4>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </Fragment>
+  </TheSection>
 </App>

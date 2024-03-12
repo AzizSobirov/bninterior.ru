@@ -114,20 +114,22 @@ import { services, processes, recents } from "../index.store";
         помимо красоты и трендов в дизайне, ориентируюсь на функциональность
         и практичность интерьера.
       </P>
-      <Button type="link" to="/projects" variant="secondary">
+      <Button type="link" to="/portfolio" variant="secondary">
         посмотреть все портфолио
       </Button>
     </Row>
     <div class="recent__projects">
       {
         recents.map((item) => (
-          <div class="recent__projects-item">
+          <a href="/portfolio-project" class="recent__projects-item">
             <Img src={item.img} only />
             <H4>{item.title}</H4>
-            <Button type="link" to={item.link} variant="secondary">
-              посмотреть проект
-            </Button>
-          </div>
+            <object>
+              <Button type="link" to="/portfolio-project" variant="secondary">
+                посмотреть проект
+              </Button>
+            </object>
+          </a>
         ))
       }
     </div>

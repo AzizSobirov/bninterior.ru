@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="My Astro template" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#232b12" />
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/fancybox.min.css" />
+    <title>Что такое комплектация</title>
+    <link rel="stylesheet" href="/assets/css/app.sTlsJg01.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="/" class="header__logo">
+          <img src="/assets/img/logo.png" alt="" />
+        </a>
+        <div class="text-sm hidden xl:block">
+          Студия дизайна интерьера <br />г. Санкт-Петербург
+        </div>
+        <ul class="header__list">
+          <li class="header__list-item">
+            <a class="xl:text-xl" href="/"> Главная </a>
+          </li>
+          <li class="header__list-item">
+            <a class="xl:text-xl" href="/services"> Услуги </a>
+          </li>
+          <li class="header__list-item">
+            <a class="xl:text-xl" href="/portfolio"> Проекты </a>
+          </li>
+          <li class="header__list-item">
+            <a class="xl:text-xl" href="/blog"> Блог </a>
+          </li>
+          <li class="header__list-item">
+            <a class="xl:text-xl" href="/about"> О нас </a>
+          </li>
+          <li class="header__list-item">
+            <a class="xl:text-xl" href="/contacts"> Контакты </a>
+          </li>
+          <li class="header__list-item">
+            <a href="/" class="btn btn--primary">НАПИСАТЬ МНЕ</a>
+          </li>
+        </ul>
+        <div class="header__menu" onclick="toggleMenu()">
+          <svg
+            width="
+      100"
+            height="100"
+            viewBox="0 0 100 100"
+          >
+            <path
+              class="line line1"
+              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+            ></path>
+            <path class="line line2" d="M 20,50 H 80"></path>
+            <path
+              class="line line3"
+              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+            ></path>
+          </svg>
+        </div>
+        <div class="header__close" onclick="toggleMenu()"></div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__wrapper">
+          <div class="container">
+            <div class="col">
+              <div class="text-h2 font-futura uppercase">
+                ЧТО ТАКОЕ <br />
+                Комплектация
+              </div>
+            </div>
+            <div class="col">
+              <img class="img" src="/assets/img/services/4.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="prices">
+        <div class="container">
+          <p class="text-lg xl:text-2xl">
+            Со стороны может показаться, что комплектация это простой процесс.
+            Покупаешь все позиции по смете с доставкой на объект и все. Но
+            решающее значение имеет количество закупок, человеческий фактор и
+            сжатые сроки.
+            <br /><br />
+            Комплектация - это целый комплекс работ. Важно не только подобрать
+            все позиции по смете в соответствии с дизайн-проектом, но и вовремя
+            их купить, организовать своевременную доставку на объект, а также
+            скоординировать работу всех сторонних подрядчиков, участвующих в
+            реализации проекта.  
+            <br /><br />
+            Ниже подробно описаны все работы, которые мы включаем комплектацию.
+            Надеемся, что эта информация поможет вам принять взвешенное решение
+            о необходимости этой услуги для вашего проекта.
+          </p>
+        </div>
+      </section>
+
+      <section class="included">
+        <div class="container">
+          <div class="text-h2 font-futura">Что входит в комплектацию</div>
+          <ul class="included__list">
+            <li>
+              <div class="img">
+                <img src="/assets/img/services/biezda-obyekt.png" alt="" />
+              </div>
+              <div class="col">
+                <div class="text-h4">Составление графика закупок</div>
+                <p class="text-sm sm:text-base">
+                  Если сразу закупить все отделочные материалы, мебель и пр.,
+                  это превратит объект в склад, и строители не смогут выполнять
+                  свою работу. Все необходимые товары должны доставляться к
+                  началу соответствующего вида работ. Комплектация начинается с
+                  составления графика закупок, который учитывает график
+                  строительных работ, сроки изготовления и доставки. График
+                  позволяет не создавать лишние трудности строителям,
+                  максимально быстро переходить от одного этапа работы к
+                  другому, а также защищает будущие предметы интерьера от порчи
+                  в ходе строительных работ.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="img">
+                <img
+                  src="/assets/img/services/distansionniy-kontrol.png"
+                  alt=""
+                />
+              </div>
+              <div class="col">
+                <div class="text-h4">Подготовка выкрасов и образцов</div>
+                <p class="text-sm sm:text-base">
+                  В смете каждого проекта есть позиции, которые можно выбрать
+                  только по выкрасам и образцам. Обычно это цвет краски, паркет,
+                  материал корпусной мебели и т.д. Мы заказываем выкрасы и
+                  образцы для всех этих позиций, обсуждаем и утверждаем с
+                  заказчиком.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="img">
+                <img src="/assets/img/services/konsultatsii.png" alt="" />
+              </div>
+              <div class="col">
+                <div class="text-h4">Поиск шоу-румов и магазинов</div>
+                <p class="text-sm sm:text-base">
+                  Такие предметы, как мягкая мебель, ковры, некоторые виды
+                  светильников, керамической плитки и др. лучше выбирать по
+                  выставочным образцам в шоу-румах. Мы ищем магазины, в которых
+                  представлены в наличии необходимые нам позиции и составляем
+                  маршрут для выезда.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="img">
+                <img src="/assets/img/services/koordinatsiya.png" alt="" />
+              </div>
+              <div class="col">
+                <div class="text-h4">Организация закупок</div>
+                <p class="text-sm sm:text-base">
+                  Все утвержденные позиции покупаются в соответствии с графиком
+                  закупок. Мы курируем и проверяем все счета, договоры и другие
+                  необходимые документы. Мы ведем учет всех финансовых
+                  документов, что обеспечивает своевременную доставку товаров и
+                  оказание услуг, оплата которых разделена на несколько этапов.
+                  Отправляем заказчику ежемесячные отчеты о расходах.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="img">
+                <img
+                  src="/assets/img/services/izmeneniya-proyekte.png"
+                  alt=""
+                />
+              </div>
+              <div class="col">
+                <div class="text-h4">Поиск и координация подрядчиков</div>
+                <p class="text-sm sm:text-base">
+                  В большинстве проектов есть элементы дизайна, которые
+                  необходимо изготовить на заказ - мебель индивидуального
+                  изготовления, стеклянные перегородки, двери и др. Мы помогаем
+                  с поиском и выбором сторонних подрядчиков. А затем
+                  координируем их работу: договариваемся о выезде на замеры,
+                  согласуем время их работы с прорабом, консультируем по всем
+                  вопросам, связанным с проектом, следим чтобы работы
+                  выполнялись в срок и соответствовали договору.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="img">
+                <img src="/assets/img/services/utverjdeniye.png" alt="" />
+              </div>
+              <div class="col">
+                <div class="text-h4">Организация доставок</div>
+                <p class="text-sm sm:text-base">
+                  Одна из главных целей комплектации - организовать все доставки
+                  на объект вовремя. Перед покупкой всех позиций мы всегда
+                  учитываем их срок изготовления и доставки. Поэтому все
+                  доставки осуществляются в соответствии с графиком строительных
+                  работ. Мы передаем службам доставки всю необходимую информацию
+                  и предупреждаем принимающее лицо о предстоящей доставки.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="adv">
+        <div class="container">
+          <div class="text-h2 font-futura">Преимущества комплектации</div>
+          <ul class="adv__list">
+            <li class="adv__list-item">
+              <img class="img" src="/assets/img/icons/check.svg" alt="" />
+              <div class="col">
+                <div class="text-h4">скидки на все товары и услуги</div>
+                <p class="text-sm sm:text-base">
+                  Мы являемся оптовым покупателем и большинство компаний
+                  предоставляют нам дополнительные скидки на свои товары и
+                  услуги. Как правило, размер скидки составляем около 10%. Все
+                  скидки мы предоставляем вам.
+                </p>
+              </div>
+            </li>
+            <li class="adv__list-item">
+              <img class="img" src="/assets/img/icons/check.svg" alt="" />
+              <div class="col">
+                <div class="text-h4">никакой организационной работы</div>
+                <p class="text-sm sm:text-base">
+                  Мы избавим вас от необходимости вести бесконечные переговоры с
+                  менеджерами, проконтролируем подготовку всей необходимой для
+                  покупки документации, решим все организационные вопросы.
+                </p>
+              </div>
+            </li>
+            <li class="adv__list-item">
+              <img class="img" src="/assets/img/icons/check.svg" alt="" />
+              <div class="col">
+                <div class="text-h4">никакого стресса при выборе</div>
+                <p class="text-sm sm:text-base">
+                  Мы берем на себя всю работу, связанную с подготовкой образцов,
+                  поиском шоу-румов, товара в наличии и т.д. Вам не придется
+                  ничего ездить, искать, общаться с менеджерами и др. Мы
+                  подготовим для вас столько вариантов, сколько вам понадобится
+                  для принятия окончательного решения.
+                </p>
+              </div>
+            </li>
+            <li class="adv__list-item">
+              <img class="img" src="/assets/img/icons/check.svg" alt="" />
+              <div class="col">
+                <div class="text-h4">своевременная закупка всего</div>
+                <p class="text-sm sm:text-base">
+                  Мы проследим за тем, чтобы все отделочные материалы и предметы
+                  интерьера доставлялись на стройку вовремя. Это позволит
+                  строителям выполнять работу в соответствии с графиком,
+                  исключит вероятность простоев, сэкономит вам деньги и позволит
+                  вовремя закончить ремонт.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="disadv">
+        <div class="container">
+          <div class="text-h2 font-futura">В комплектацию не входит</div>
+          <ul class="disadv__list">
+            <li class="disadv__list-item">
+              <img class="img" src="/assets/img/icons/close.svg" alt="" />
+              <p class="text-lg xl:text-2xl">Составление сметы</p>
+            </li>
+            <li class="disadv__list-item">
+              <img class="img" src="/assets/img/icons/close.svg" alt="" />
+              <p class="text-lg xl:text-2xl">
+                Ответственность за услуги подрядных организаций и их качество
+              </p>
+            </li>
+            <li class="disadv__list-item">
+              <img class="img" src="/assets/img/icons/close.svg" alt="" />
+              <p class="text-lg xl:text-2xl">
+                Прием, проверка качества и количества материалов, мебели и др.
+              </p>
+            </li>
+            <li class="disadv__list-item">
+              <img class="img" src="/assets/img/icons/close.svg" alt="" />
+              <p class="text-lg xl:text-2xl">
+                Ответственность за хранение материалов, мебели, текстиля и др.
+              </p>
+            </li>
+            <li class="disadv__list-item">
+              <img class="img" src="/assets/img/icons/close.svg" alt="" />
+              <p class="text-lg xl:text-2xl">
+                Передача денежных средств от имени заказчика третьим лицам, т.е.
+                оплата чего-либо.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <div class="text-h3">
+            ГОТОВЫ СДЕЛАТЬ ИНТЕРЬЕР <br class="sm:hidden" />
+            ВАШЕЙ МЕЧТЫ?
+          </div>
+          <div class="text-h4">
+            Просто заполните бриф или напишите мне в What's App
+          </div>
+          <div class="row">
+            <a href="#" class="xl:text-xl underline">ЗАПОЛНИТЬ БРИФ</a>
+            <a href="#" class="btn btn--secondary">
+              <div class="xl:text-xl uppercase">НАПИСАТЬ МНЕ</div>
+              <svg
+                width="30"
+                height="8"
+                viewBox="0 0 30 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M29.3536 4.35355C29.5488 4.15829 29.5488 3.84171 29.3536 3.64645L26.1716 0.464466C25.9763 0.269204 25.6597 0.269204 25.4645 0.464466C25.2692 0.659728 25.2692 0.976311 25.4645 1.17157L28.2929 4L25.4645 6.82843C25.2692 7.02369 25.2692 7.34027 25.4645 7.53553C25.6597 7.7308 25.9763 7.7308 26.1716 7.53553L29.3536 4.35355ZM0 4.5H29V3.5H0V4.5Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__body">
+        <div class="container">
+          <div class="col text-h4">
+            <div class="uppercase">СТУДИЯ ДИЗАЙНА ИНТЕРЬЕРА BN INTERIOR</div>
+            <span>
+              Адрес студии: г. Санкт-Петербург, <br />
+              пр. Юрия Гагарина, д.7, помещение 54Н
+            </span>
+            <a class="underline" href="mailto:bochina.interior@gmail.com">
+              bochina.interior@gmail.com
+            </a>
+            <a class="underline" href="tel:+79602525597">+7(960) 252-55-97</a>
+          </div>
+          <div class="col text-h4">
+            <div class="uppercase">МОИ СОЦСЕТИ</div>
+            <div class="row">
+              <a
+                class="underline"
+                href="https://www.houzz.ru/professionaly/dizaynery-interyera/bochina-interior-pfvwru-pf~1512582962"
+              >
+                Houzz
+              </a>
+              <a class="underline" href="https://wa.me/79602525597">
+                Whats App</a
+              >
+              <a
+                class="underline"
+                href="https://www.instagram.com/bn_spb_interior?igshid=YmMyMTA2M2Y%3D"
+              >
+                Inst*
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container text-gray">
+          <div class="col">
+            ИП Бочина Наталья Валерьевна <br />
+            ИНН: 602709199570 <br />
+            ОГРН: 321784700043106 <br />
+            © BN interior. Все права защищены, 2022 г. <br />
+            <a href="/privacy" class="underline">Политика обработки данных</a>
+          </div>
+          <div class="col">
+            Inst* — организация признана экстремисткой и запрещена на территории
+            РФ
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/yandexmap.min.js"></script>
+    <script src="/assets/js/fancybox.min.js"></script>
+    <script src="/assets/js/app.js?v=1710225253639"></script>
+  </body>
+</html>

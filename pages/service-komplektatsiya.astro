@@ -1,0 +1,54 @@
+---
+import { service } from "../index.store";
+---
+
+<App title="Что такое комплектация">
+  <!-- TheHero -->
+  <TheHero title="ЧТО ТАКОЕ <br> Комплектация">
+    <Img src="services/4.png" only />
+  </TheHero>
+  <!-- ThePrices -->
+  <TheSection name="prices">
+    <P>
+      Со стороны может показаться, что комплектация это простой процесс.
+      Покупаешь все позиции по смете с доставкой на объект и все. Но решающее
+      значение имеет количество закупок, человеческий фактор и сжатые сроки.
+      <br /><br />
+      Комплектация - это целый комплекс работ. Важно не только подобрать все позиции
+      по смете в соответствии с дизайн-проектом, но и вовремя их купить, организовать
+      своевременную доставку на объект, а также скоординировать работу всех сторонних
+      подрядчиков, участвующих в реализации проекта.  
+      <br /><br />
+      Ниже подробно описаны все работы, которые мы включаем комплектацию. Надеемся,
+      что эта информация поможет вам принять взвешенное решение о необходимости этой
+      услуги для вашего проекта.
+    </P>
+  </TheSection>
+  <!-- TheServiceIncluded -->
+  <TheSection name="included">
+    <H2 ui="font-futura">Что входит в комплектацию</H2>
+    <ul class="included__list">
+      {
+        service.komplekt.list.map((service) => (
+          <li>
+            <Img src={service.icon} />
+            <Col>
+              <H4>{service.title}</H4>
+              <p class="text-sm sm:text-base">{service.desc}</p>
+            </Col>
+          </li>
+        ))
+      }
+    </ul>
+  </TheSection>
+  <!-- TheService Advantages -->
+  <TheAdvantages
+    title="Преимущества комплектации"
+    list={service.komplekt.advantages}
+  />
+  <!-- TheService DisAdvantages -->
+  <TheDisAdvantages
+    title="В комплектацию не входит"
+    list={service.komplekt.disadvantages}
+  />
+</App>

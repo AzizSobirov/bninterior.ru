@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="My Astro template" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#232b12" />
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/fancybox.min.css" />
+    <title>Услуги</title>
+    <link rel="stylesheet" href="/assets/css/app.sTlsJg01.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="/" class="header__logo">
+          <img src="/assets/img/logo.png" alt="" />
+        </a>
+        <div class="text-sm hidden xl:block">
+          Студия дизайна интерьера <br />г. Санкт-Петербург
+        </div>
+        <ul class="header__list">
+          <li class="header__list-item">
+            <a class="xl:text-xl" href="/"> Главная </a>
+          </li>
+          <li class="header__list-item">
+            <a class="xl:text-xl" href="/services"> Услуги </a>
+          </li>
+          <li class="header__list-item">
+            <a class="xl:text-xl" href="/portfolio"> Проекты </a>
+          </li>
+          <li class="header__list-item">
+            <a class="xl:text-xl" href="/blog"> Блог </a>
+          </li>
+          <li class="header__list-item">
+            <a class="xl:text-xl" href="/about"> О нас </a>
+          </li>
+          <li class="header__list-item">
+            <a class="xl:text-xl" href="/contacts"> Контакты </a>
+          </li>
+          <li class="header__list-item">
+            <a href="/" class="btn btn--primary">НАПИСАТЬ МНЕ</a>
+          </li>
+        </ul>
+        <div class="header__menu" onclick="toggleMenu()">
+          <svg
+            width="
+      100"
+            height="100"
+            viewBox="0 0 100 100"
+          >
+            <path
+              class="line line1"
+              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+            ></path>
+            <path class="line line2" d="M 20,50 H 80"></path>
+            <path
+              class="line line3"
+              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+            ></path>
+          </svg>
+        </div>
+        <div class="header__close" onclick="toggleMenu()"></div>
+      </div>
+    </header>
+    <main>
+      <section class="service">
+        <div class="container">
+          <div class="text-h2 font-futura uppercase">перечень услуг</div>
+        </div>
+
+        <div class="service__item">
+          <div class="service__header">
+            <img class="img" src="/assets/img/services/1.png" alt="" />
+            <div class="col">
+              <div class="text-h2 font-futura uppercase">ДИЗАЙН-ПРОЕКТ</div>
+              <p class="text-lg xl:text-2xl">
+                Комплект документов, описывающих функциональные и дизайнерские
+                решения. Чертежи помещения, фотореалистичные визуализации и
+                спецификации.
+              </p>
+              <div class="text-h3">от 5 000 руб/м2</div>
+              <a href="/service-design" class="btn btn--primary">
+                ЧТО ВХОДИТ В ДИЗАЙН-ПРОЕКТ
+              </a>
+            </div>
+          </div>
+          <div class="service__body container">
+            <div class="text-h2 font-futura">Что входит в дизайн-проект</div>
+            <ul class="service__details service--design">
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/obmeri.png" alt="" />
+                </div>
+                <div class="text-h4">Обмеры</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img
+                    src="/assets/img/services/podgotovleniy-etap.png"
+                    alt=""
+                  />
+                </div>
+                <div class="text-h4">Подготовительный этап</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img
+                    src="/assets/img/services/stilicheskoye-resheniye.png"
+                    alt=""
+                  />
+                </div>
+                <div class="text-h4">Стилистическое решение</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img
+                    src="/assets/img/services/planirovochnoye-resheniye.png"
+                    alt=""
+                  />
+                </div>
+                <div class="text-h4">Планировочное решение</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/vizualizatsiya.png" alt="" />
+                </div>
+                <div class="text-h4">
+                  Визуализация в масштабе 1:1 (MULTIPLAN)
+                </div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/vizulizatsiya.png" alt="" />
+                </div>
+                <div class="text-h4">Визуализация</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img
+                    src="/assets/img/services/podgotovka-paketa.png"
+                    alt=""
+                  />
+                </div>
+                <div class="text-h4">Подготовка пакета чертежей</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img
+                    src="/assets/img/services/podgotovka-spetsifikatsii.png"
+                    alt=""
+                  />
+                </div>
+                <div class="text-h4">Подготовка спецификации</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="service__item">
+          <div class="service__header">
+            <img class="img" src="/assets/img/services/2.png" alt="" />
+            <div class="col">
+              <div class="text-h2 font-futura uppercase">АВТОРСКИЙ НАДЗОР</div>
+              <p class="text-lg xl:text-2xl">
+                Контроль соответствия строительных работ проектной документации.
+                Оперативное и квалифицированное внесение изменений в проект при
+                обоснованных отступлениях от проектной документации.
+              </p>
+              <div class="text-h3">от 40 000 руб. в месяц</div>
+              <a href="/service-nadzor" class="btn btn--primary">
+                ЧТО ВХОДИТ В ДИЗАЙН-ПРОЕКТ
+              </a>
+            </div>
+          </div>
+          <div class="service__body container">
+            <div class="text-h2 font-futura">Что входит в авторский надзор</div>
+            <ul class="service__details service--nadzor">
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/biezda-obyekt.png" alt="" />
+                </div>
+                <div class="text-h4">Выезды на объект</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img
+                    src="/assets/img/services/distansionniy-kontrol.png"
+                    alt=""
+                  />
+                </div>
+                <div class="text-h4">Дистанционный контроль</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/konsultatsii.png" alt="" />
+                </div>
+                <div class="text-h4">Консультации</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/koordinatsiya.png" alt="" />
+                </div>
+                <div class="text-h4">
+                  Координация работы сторонних подрядчиков
+                </div>
+              </li>
+              <li>
+                <div class="img">
+                  <img
+                    src="/assets/img/services/izmeneniya-proyekte.png"
+                    alt=""
+                  />
+                </div>
+                <div class="text-h4">Изменения в проекте</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/utverjdeniye.png" alt="" />
+                </div>
+                <div class="text-h4">Утверждение выкрасов и образцов</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="service__item">
+          <div class="service__header">
+            <img class="img" src="/assets/img/services/3.png" alt="" />
+            <div class="col">
+              <div class="text-h2 font-futura uppercase">СОСТАВЛЕНИЕ СМЕТЫ</div>
+              <p class="text-lg xl:text-2xl">
+                Расчет расходов на реализацию дизайн-проекта. Включает в себя
+                отделочные материалы, сантехнику, мебель, освещение, технику,
+                декор и другие элементы дизайна
+              </p>
+              <div class="text-h3">от 50 000 руб.</div>
+              <a href="/service-smeta" class="btn btn--primary">
+                ЧТО ВХОДИТ В ДИЗАЙН-ПРОЕКТ
+              </a>
+            </div>
+          </div>
+          <div class="service__body container">
+            <div class="text-h2 font-futura">
+              Смета содержит расчет для следующих позиций
+            </div>
+            <ul class="service__details service--smeta">
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/otdelniy.png" alt="" />
+                </div>
+                <div class="text-h4">Отделочные материалы</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/mebel.png" alt="" />
+                </div>
+                <div class="text-h4">Мебель</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/santexnika.png" alt="" />
+                </div>
+                <div class="text-h4">Сантехника</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/osvesheniye.png" alt="" />
+                </div>
+                <div class="text-h4">Освещение</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/texnika.png" alt="" />
+                </div>
+                <div class="text-h4">Техника</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/dekor.png" alt="" />
+                </div>
+                <div class="text-h4">Декор</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/prochie.png" alt="" />
+                </div>
+                <div class="text-h4">Прочие элементы дизайна</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="service__item">
+          <div class="service__header">
+            <img class="img" src="/assets/img/services/4.png" alt="" />
+            <div class="col">
+              <div class="text-h2 font-futura uppercase">КОМПЛЕКТАЦИЯ</div>
+              <p class="text-lg xl:text-2xl">
+                Комплекс работ, направленный на своевременную закупку всех
+                позиций по смете для обеспечения максимально быстрого перехода
+                от одного этапа строительных работ к другому.
+              </p>
+              <div class="text-h3">10% от стоимости сметы</div>
+              <a href="/service-komplektatsiya" class="btn btn--primary">
+                ЧТО ВХОДИТ В ДИЗАЙН-ПРОЕКТ
+              </a>
+            </div>
+          </div>
+          <div class="service__body container">
+            <div class="text-h2 font-futura">Что входит в комплектацию</div>
+            <ul class="service__details service--komplekt">
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/biezda-obyekt.png" alt="" />
+                </div>
+                <div class="text-h4">Составление графика закупок</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img
+                    src="/assets/img/services/distansionniy-kontrol.png"
+                    alt=""
+                  />
+                </div>
+                <div class="text-h4">Подготовка выкрасов и образцов</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/konsultatsii.png" alt="" />
+                </div>
+                <div class="text-h4">Поиск шоу-румов и магазинов</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/koordinatsiya.png" alt="" />
+                </div>
+                <div class="text-h4">Организация закупок</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img
+                    src="/assets/img/services/izmeneniya-proyekte.png"
+                    alt=""
+                  />
+                </div>
+                <div class="text-h4">Поиск и координация подрядчиков</div>
+              </li>
+              <li>
+                <div class="img">
+                  <img src="/assets/img/services/utverjdeniye.png" alt="" />
+                </div>
+                <div class="text-h4">Организация доставок</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <div class="text-h3">
+            ГОТОВЫ СДЕЛАТЬ ИНТЕРЬЕР <br class="sm:hidden" />
+            ВАШЕЙ МЕЧТЫ?
+          </div>
+          <div class="text-h4">
+            Просто заполните бриф или напишите мне в What's App
+          </div>
+          <div class="row">
+            <a href="#" class="xl:text-xl underline">ЗАПОЛНИТЬ БРИФ</a>
+            <a href="#" class="btn btn--secondary">
+              <div class="xl:text-xl uppercase">НАПИСАТЬ МНЕ</div>
+              <svg
+                width="30"
+                height="8"
+                viewBox="0 0 30 8"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M29.3536 4.35355C29.5488 4.15829 29.5488 3.84171 29.3536 3.64645L26.1716 0.464466C25.9763 0.269204 25.6597 0.269204 25.4645 0.464466C25.2692 0.659728 25.2692 0.976311 25.4645 1.17157L28.2929 4L25.4645 6.82843C25.2692 7.02369 25.2692 7.34027 25.4645 7.53553C25.6597 7.7308 25.9763 7.7308 26.1716 7.53553L29.3536 4.35355ZM0 4.5H29V3.5H0V4.5Z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__body">
+        <div class="container">
+          <div class="col text-h4">
+            <div class="uppercase">СТУДИЯ ДИЗАЙНА ИНТЕРЬЕРА BN INTERIOR</div>
+            <span>
+              Адрес студии: г. Санкт-Петербург, <br />
+              пр. Юрия Гагарина, д.7, помещение 54Н
+            </span>
+            <a class="underline" href="mailto:bochina.interior@gmail.com">
+              bochina.interior@gmail.com
+            </a>
+            <a class="underline" href="tel:+79602525597">+7(960) 252-55-97</a>
+          </div>
+          <div class="col text-h4">
+            <div class="uppercase">МОИ СОЦСЕТИ</div>
+            <div class="row">
+              <a
+                class="underline"
+                href="https://www.houzz.ru/professionaly/dizaynery-interyera/bochina-interior-pfvwru-pf~1512582962"
+              >
+                Houzz
+              </a>
+              <a class="underline" href="https://wa.me/79602525597">
+                Whats App</a
+              >
+              <a
+                class="underline"
+                href="https://www.instagram.com/bn_spb_interior?igshid=YmMyMTA2M2Y%3D"
+              >
+                Inst*
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container text-gray">
+          <div class="col">
+            ИП Бочина Наталья Валерьевна <br />
+            ИНН: 602709199570 <br />
+            ОГРН: 321784700043106 <br />
+            © BN interior. Все права защищены, 2022 г. <br />
+            <a href="/privacy" class="underline">Политика обработки данных</a>
+          </div>
+          <div class="col">
+            Inst* — организация признана экстремисткой и запрещена на территории
+            РФ
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/yandexmap.min.js"></script>
+    <script src="/assets/js/fancybox.min.js"></script>
+    <script src="/assets/js/app.js?v=1710225253775"></script>
+  </body>
+</html>

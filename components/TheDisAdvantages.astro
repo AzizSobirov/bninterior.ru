@@ -8,7 +8,7 @@ const { title, list } = Astro.props;
 ---
 
 <TheSection name="disadv">
-  <H2 ui="font-futura font-light">{title}</H2>
+  <H2 ui="font-futura">{title}</H2>
   <ul class="disadv__list" class:list={list.length == 4 ? "flex" : ""}>
     {
       list.map((item) => (

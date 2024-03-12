@@ -10,7 +10,7 @@ const { title } = Astro.props;
   <div class="hero__wrapper">
     <div class="container">
       <Col>
-        <H2 ui="font-futura font-light uppercase" set:html={title} />
+        <H2 ui="font-futura uppercase" set:html={title} />
       </Col>
       <Col><slot /></Col>
     </div>
