@@ -4,69 +4,9 @@
   padding: 20px 0 50px;
 
   .container {
-    @include grid-cols(3, 20px);
-  }
-
-  &__group {
-    width: 100%;
-    @include start(column, 20px, flex-start);
-
-    &:nth-child(1) {
-      .portfolio__project:nth-child(1),
-      .portfolio__project:nth-child(4),
-      .portfolio__project:nth-child(7) {
-        height: 830px;
-      }
-
-      .portfolio__project:nth-child(2),
-      .portfolio__project:nth-child(5),
-      .portfolio__project:nth-child(8) {
-        height: 600px;
-      }
-      .portfolio__project:nth-child(3),
-      .portfolio__project:nth-child(6),
-      .portfolio__project:nth-child(9) {
-        height: 285px;
-      }
-    }
-
-    &:nth-child(2) {
-      .portfolio__project:nth-child(1),
-      .portfolio__project:nth-child(4),
-      .portfolio__project:nth-child(7) {
-        height: 285px;
-      }
-
-      .portfolio__project:nth-child(2),
-      .portfolio__project:nth-child(5),
-      .portfolio__project:nth-child(8) {
-        height: 830px;
-      }
-      .portfolio__project:nth-child(3),
-      .portfolio__project:nth-child(6),
-      .portfolio__project:nth-child(9) {
-        height: 600px;
-      }
-    }
-
-    &:nth-child(3) {
-      .portfolio__project:nth-child(1),
-      .portfolio__project:nth-child(4),
-      .portfolio__project:nth-child(7) {
-        height: 600px;
-      }
-
-      .portfolio__project:nth-child(2),
-      .portfolio__project:nth-child(5),
-      .portfolio__project:nth-child(8) {
-        height: 285px;
-      }
-      .portfolio__project:nth-child(3),
-      .portfolio__project:nth-child(6),
-      .portfolio__project:nth-child(9) {
-        height: 830px;
-      }
-    }
+    column-count: 3;
+    column-gap: 20px;
+    @include space-y(20px);
   }
 
   &__project {
@@ -75,6 +15,7 @@
     width: 100%;
     cursor: pointer;
     overflow: hidden;
+    display: block;
 
     .img {
       width: 100%;
@@ -116,158 +57,96 @@
     }
   }
 
+  &__project:nth-child(1),
+  &__project:nth-child(4),
+  &__project:nth-child(8),
+  &__project:nth-child(11),
+  &__project:nth-child(15),
+  &__project:nth-child(18) {
+    height: 830px;
+  }
+  &__project:nth-child(2),
+  &__project:nth-child(5),
+  &__project:nth-child(9),
+  &__project:nth-child(12),
+  &__project:nth-child(13),
+  &__project:nth-child(16) {
+    height: 600px;
+  }
+  &__project:nth-child(3),
+  &__project:nth-child(6),
+  &__project:nth-child(7),
+  &__project:nth-child(10),
+  &__project:nth-child(14),
+  &__project:nth-child(17) {
+    height: 285px;
+  }
+
   @include media("3xl") {
     .text-h2 {
       font-size: 36px;
     }
 
-    &__group {
-      &:nth-child(1) {
-        .portfolio__project:nth-child(1),
-        .portfolio__project:nth-child(4),
-        .portfolio__project:nth-child(7) {
-          height: 630px;
-        }
-
-        .portfolio__project:nth-child(2),
-        .portfolio__project:nth-child(5),
-        .portfolio__project:nth-child(8) {
-          height: 400px;
-        }
-        .portfolio__project:nth-child(3),
-        .portfolio__project:nth-child(6),
-        .portfolio__project:nth-child(9) {
-          height: 285px;
-        }
-      }
-
-      &:nth-child(2) {
-        .portfolio__project:nth-child(1),
-        .portfolio__project:nth-child(4),
-        .portfolio__project:nth-child(7) {
-          height: 285px;
-        }
-
-        .portfolio__project:nth-child(2),
-        .portfolio__project:nth-child(5),
-        .portfolio__project:nth-child(8) {
-          height: 630px;
-        }
-        .portfolio__project:nth-child(3),
-        .portfolio__project:nth-child(6),
-        .portfolio__project:nth-child(9) {
-          height: 400px;
-        }
-      }
-
-      &:nth-child(3) {
-        .portfolio__project:nth-child(1),
-        .portfolio__project:nth-child(4),
-        .portfolio__project:nth-child(7) {
-          height: 400px;
-        }
-
-        .portfolio__project:nth-child(2),
-        .portfolio__project:nth-child(5),
-        .portfolio__project:nth-child(8) {
-          height: 285px;
-        }
-        .portfolio__project:nth-child(3),
-        .portfolio__project:nth-child(6),
-        .portfolio__project:nth-child(9) {
-          height: 630px;
-        }
-      }
+    &__project:nth-child(1),
+    &__project:nth-child(4),
+    &__project:nth-child(8),
+    &__project:nth-child(11),
+    &__project:nth-child(15),
+    &__project:nth-child(18) {
+      height: 630px;
+    }
+    &__project:nth-child(2),
+    &__project:nth-child(5),
+    &__project:nth-child(9),
+    &__project:nth-child(12),
+    &__project:nth-child(13),
+    &__project:nth-child(16) {
+      height: 400px;
     }
   }
   @include media("xl") {
     .container {
-      gap: 15px;
+      column-gap: 15px;
+      @include space-y(15px);
     }
 
-    &__group {
-      gap: 15px;
-
-      &:nth-child(1) {
-        .portfolio__project:nth-child(1),
-        .portfolio__project:nth-child(4),
-        .portfolio__project:nth-child(7) {
-          height: 500px;
-        }
-
-        .portfolio__project:nth-child(2),
-        .portfolio__project:nth-child(5),
-        .portfolio__project:nth-child(8) {
-          height: 400px;
-        }
-        .portfolio__project:nth-child(3),
-        .portfolio__project:nth-child(6),
-        .portfolio__project:nth-child(9) {
-          height: 285px;
-        }
-      }
-
-      &:nth-child(2) {
-        .portfolio__project:nth-child(1),
-        .portfolio__project:nth-child(4),
-        .portfolio__project:nth-child(7) {
-          height: 285px;
-        }
-
-        .portfolio__project:nth-child(2),
-        .portfolio__project:nth-child(5),
-        .portfolio__project:nth-child(8) {
-          height: 500px;
-        }
-        .portfolio__project:nth-child(3),
-        .portfolio__project:nth-child(6),
-        .portfolio__project:nth-child(9) {
-          height: 400px;
-        }
-      }
-
-      &:nth-child(3) {
-        .portfolio__project:nth-child(1),
-        .portfolio__project:nth-child(4),
-        .portfolio__project:nth-child(7) {
-          height: 400px;
-        }
-
-        .portfolio__project:nth-child(2),
-        .portfolio__project:nth-child(5),
-        .portfolio__project:nth-child(8) {
-          height: 285px;
-        }
-        .portfolio__project:nth-child(3),
-        .portfolio__project:nth-child(6),
-        .portfolio__project:nth-child(9) {
-          height: 500px;
-        }
-      }
+    &__project:nth-child(1),
+    &__project:nth-child(4),
+    &__project:nth-child(8),
+    &__project:nth-child(11),
+    &__project:nth-child(15),
+    &__project:nth-child(18) {
+      height: 500px;
+    }
+    &__project:nth-child(2),
+    &__project:nth-child(5),
+    &__project:nth-child(9),
+    &__project:nth-child(12),
+    &__project:nth-child(13),
+    &__project:nth-child(16) {
+      height: 400px;
+    }
+    &__project:nth-child(3),
+    &__project:nth-child(6),
+    &__project:nth-child(7),
+    &__project:nth-child(10),
+    &__project:nth-child(14),
+    &__project:nth-child(17) {
+      height: 285px;
     }
   }
   @include media("lg") {
     .container {
-      grid-template-columns: 1fr;
-    }
-
-    &__group {
-      @include grid-cols(2, 15px);
-
-      .portfolio__project {
-        height: 100% !important;
-      }
+      column-count: 2;
     }
   }
   @include media("sm") {
     padding: 10px 0 30px;
 
     .container {
-      gap: 10px;
-    }
-
-    &__group {
-      gap: 10px;
+      column-count: 1;
+      column-gap: 10px;
+      @include space-y(10px);
     }
 
     .text-h2 {
@@ -276,7 +155,7 @@
 
     &__project {
       height: auto !important;
-      max-height: 400px;
+      max-height: 300px;
 
       &-info {
         padding: 10px;
@@ -291,8 +170,8 @@
     }
   }
   @include media("xs") {
-    &__group {
-      grid-template-columns: 1fr;
+    &__project {
+      max-height: 280px;
     }
   }
 }

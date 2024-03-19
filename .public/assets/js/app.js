@@ -63,58 +63,60 @@ dataFancybox.forEach((name) => {
 });
 
 //** yandex map */
-ymaps.ready(function () {
-  const data = {
-    center: [59.87239, 30.334969],
-    marker: [59.87290, 30.334229],
-    icon: "/assets/img/icons/marker.svg",
-    city: "г. Санкт-Петербург",
-    street: "Пр. Юрия Гагарина, д.7, помещение 54Н",
-  };
+const isMap = document.querySelector("#yamap");
+isMap &&
+  ymaps.ready(function () {
+    const data = {
+      center: [59.87239, 30.334969],
+      marker: [59.8729, 30.334229],
+      icon: "/assets/img/icons/marker.svg",
+      city: "г. Санкт-Петербург",
+      street: "Пр. Юрия Гагарина, д.7, помещение 54Н",
+    };
 
-  var myMap = new ymaps.Map(
-      "yamap",
-      {
-        center: data.center,
-        zoom: 15,
-        controls: [],
-        behaviors: [
-          "drag",
-          "dblClickZoom",
-          "rightMouseButtonMagnifier",
-          "multiTouch",
-        ],
+    var myMap = new ymaps.Map(
+        "yamap",
+        {
+          center: data.center,
+          zoom: 15,
+          controls: [],
+          behaviors: [
+            "drag",
+            "dblClickZoom",
+            "rightMouseButtonMagnifier",
+            "multiTouch",
+          ],
+        },
+        {
+          suppressMapOpenBlock: true,
+        }
+      ),
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #000; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+      myPlacemark0 = new ymaps.Placemark(
+        data.marker,
+        {
+          balloonContentHeader: `<b style='color:#000;'>${data.city}</b>`,
+          balloonContentFooter: data.street,
+        },
+        {
+          iconLayout: "default#image",
+          iconImageHref: data.icon,
+          iconImageSize: [40, 50],
+          iconImageOffset: [-20 / 2, -20],
+        }
+      );
+    myMap.geoObjects.add(myPlacemark0);
+    var zoomControl = new ymaps.control.ZoomControl({
+      options: {
+        size: "small",
+        position: {
+          top: 15,
+          left: "auto",
+          right: 15,
+        },
       },
-      {
-        suppressMapOpenBlock: true,
-      }
-    ),
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-      '<div style="color: #000; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
-    myPlacemark0 = new ymaps.Placemark(
-      data.marker,
-      {
-        balloonContentHeader: `<b style='color:#000;'>${data.city}</b>`,
-        balloonContentFooter: data.street,
-      },
-      {
-        iconLayout: "default#image",
-        iconImageHref: data.icon,
-        iconImageSize: [40, 50],
-        iconImageOffset: [-20 / 2, -20],
-      }
-    );
-  myMap.geoObjects.add(myPlacemark0);
-  var zoomControl = new ymaps.control.ZoomControl({
-    options: {
-      size: "small",
-      position: {
-        top: 15,
-        left: "auto",
-        right: 15,
-      },
-    },
+    });
+    myMap.controls.add(zoomControl);
   });
-  myMap.controls.add(zoomControl);
-});

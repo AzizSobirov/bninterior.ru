@@ -1,70 +1,23 @@
 ---
 import { projects } from "../index.store";
-
-const col1: any[] = [];
-const col2: any[] = [];
-const col3: any[] = [];
-projects.filter((project, idx) => {
-  if (idx % 3 === 0) {
-    col1.push(project);
-  } else if (idx % 3 === 1) {
-    col2.push(project);
-  } else {
-    col3.push(project);
-  }
-});
 ---
 
 <App title="Проекты">
   <!-- TheProjects -->
   <TheSection name="portfolio">
-    <div class="portfolio__group">
-      {
-        col1.map((project) => (
-          <a href={project.link} class="portfolio__project">
-            <Img src={project.img} only />
-            <div class="portfolio__project-info">
-              <div class="sm:text-xl">{project.city}</div>
-              <Col>
-                <H2>{project.title}</H2>
-                <P>{project.size}</P>
-              </Col>
-            </div>
-          </a>
-        ))
-      }
-    </div>
-    <div class="portfolio__group">
-      {
-        col2.map((project) => (
-          <a href={project.link} class="portfolio__project">
-            <Img src={project.img} only />
-            <div class="portfolio__project-info">
-              <div class="sm:text-xl">{project.city}</div>
-              <Col>
-                <H2>{project.title}</H2>
-                <P>{project.size}</P>
-              </Col>
-            </div>
-          </a>
-        ))
-      }
-    </div>
-    <div class="portfolio__group">
-      {
-        col3.map((project) => (
-          <a href={project.link} class="portfolio__project">
-            <Img src={project.img} only />
-            <div class="portfolio__project-info">
-              <div class="sm:text-xl">{project.city}</div>
-              <Col>
-                <H2>{project.title}</H2>
-                <P>{project.size}</P>
-              </Col>
-            </div>
-          </a>
-        ))
-      }
-    </div>
+    {
+      projects.map((project) => (
+        <a href={project.link} class="portfolio__project">
+          <Img src={project.img} only />
+          <div class="portfolio__project-info">
+            <div class="sm:text-xl">{project.city}</div>
+            <Col>
+              <H2>{project.title}</H2>
+              <P>{project.size}</P>
+            </Col>
+          </div>
+        </a>
+      ))
+    }
   </TheSection>
 </App>
